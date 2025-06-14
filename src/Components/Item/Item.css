@@ -1,37 +1,64 @@
-.item{
-    width: 200px;
-    border:1px solid black;
-    border-radius: 20px;
+.item {
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: auto;
+  transition: transform 0.6s;
+}
 
+.item:hover {
+  transform: scale(1.05);
+}
 
+.item p {
+  margin: 6px 10px;
 }
-.item p{
-    margin: 6px 10px;
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: block;
+  object-fit: cover;
 }
-.item img{
-    border-top-left-radius:20px ;
-    border-top-right-radius:20px ;
-    align-items: center;
-    justify-content: center ;
-    width: 200px;
+
+.item-prices {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
-.item-prices{
-    display: flex;
-    gap: 20px;
+
+.item-price-new {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 600;
 }
-.item-price-new{
-    color:#374151;
-    font-size: 16px;
-    font-weight: 600;
-    padding-left: 10px;
+
+.item-price-old {
+  color: #8c8c8c;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: line-through;
 }
-.item-price-old{
-    color: #8c8c8c;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: line-through;
-}
-.item:hover{
-    transform: scale(1.1);
-    transition: 0.6s;
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .item {
+    max-width: 90%;
+  }
+
+  .item-prices {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .item-price-new,
+  .item-price-old {
+    font-size: 0.9rem;
+  }
 }

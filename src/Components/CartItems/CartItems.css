@@ -1,95 +1,152 @@
-.cartitems{
-    margin: 50px 70px;
+.cartitems {
+  margin: 3.125rem 4.375rem; /* 50px 70px */
 }
-.cartitems hr{
-    height: 3px;
-    background: #e2e2e2;
-    border: 0;
+
+.cartitems hr {
+  height: 0.1875rem; /* 3px */
+  background: #e2e2e2;
+  border: 0;
 }
-.cartitems-format-main{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 30px;
-    padding: 10px 0px;
-    color: #454545;
-    font-size: 18px;
-    font-weight: 600;
+
+.cartitems-format-main {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 1.875rem; /* 30px */
+  padding: 0.625rem 0; /* 10px 0px */
+  color: #454545;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
 }
-.cartitems-format{
-    font-size: 15px;
-    font-weight: 500;
+
+.cartitems-format {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 500;
 }
-.carticon-product-icon{
-    height: 50px;
+
+.carticon-product-icon {
+  height: 3.125rem; /* 50px */
 }
-.cartitems-remove-icon{
-    width: 15px;
-    margin: 0px 30px;
-    cursor: pointer;
+
+.cartitems-remove-icon {
+  width: 0.9375rem; /* 15px */
+  margin: 0 1.875rem; /* 0px 30px */
+  cursor: pointer;
 }
-.cartitems-quantity{
-height: 40px;
-width: 100px;
+
+.cartitems-quantity {
+  height: 2.5rem; /* 40px */
+  width: 6.25rem; /* 100px */
 }
-.cartitems-down{
-    display: flex;
-    margin: 70px 0px;
+
+.cartitems-down {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 4.375rem 0; /* 70px 0px */
 }
-.cartitems-total{
-    flex: 1;
+
+.cartitems-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 12.5rem; /* 200px */
+  gap: 1.875rem; /* 30px */
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9375rem 0; /* 15px 0px */
+}
+
+.cartitems-total button {
+  width: 15.625rem; /* 250px */
+  height: 3.125rem; /* 50px */
+  outline: none;
+  border: none;
+  background: #ff5a5a;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cartitems-promocode {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cartitems-promocode p {
+  color: #555;
+}
+
+.cartitems-promobox {
+  width: 18.75rem; /* 300px */
+  margin-top: 0.9375rem; /* 15px */
+  padding-left: 1.25rem; /* 20px */
+  height: 3.125rem; /* 50px */
+  background: #eaeaea;
+}
+
+.cartitems-promobox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  width: 100%;
+  height: 3.125rem;
+}
+
+.cartitems-promobox button {
+  width: 9.375rem; /* 150px */
+  height: 3.125rem;
+  font-size: 1rem;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 Responsive for mobile (≤768px) */
+@media (max-width: 768px) {
+  .cartitems {
+    margin: 1.5rem;
+  }
+
+  .cartitems-format-main {
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
-    gap: 30px;
-}
-.cartitems-total-item{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0px;
-}
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+  }
 
-.cartitems-total button{
-    width: 250px;
-    height: 50px;
-    outline: none;
-    border: none;
-    background: #ff5a5a;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-}
-.cartitems-promocode{
-    flex: 1;
-    font-size: 16px;
-    font-weight: 500;
+  .cartitems-down {
+    flex-direction: column;
+    margin: 2rem 0;
+  }
 
-}
-.cartitems-promocode p{
-    color: #555;
-}
-.cartitems-promobox{
-    width: 300px;
-    margin-top: 15px;
-    padding-left: 20px;
-    height: 50px;
-    background: #eaeaea;
-}
-.cartitems-promobox input{
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 16px;
-    width: 300px;
-    height: 50px;
-}
+  .cartitems-total {
+    margin-right: 0;
+    width: 100%;
+  }
 
-.cartitems-promobox button{
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-    background: black;
-    color: white;
-    cursor: pointer;
+  .cartitems-total button {
+    width: 100%;
+  }
+
+  .cartitems-promobox,
+  .cartitems-promobox input,
+  .cartitems-promobox button {
+    width: 100%;
+  }
+
+  .cartitems-format {
+    width: 100%;
+  }
+
+  .cartitems-remove-icon {
+    margin: 0;
+  }
 }

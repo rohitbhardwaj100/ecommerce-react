@@ -1,0 +1,45 @@
+/* Base layout for entire app container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure footer stays at bottom */
+main {
+  flex-grow: 1;
+}
+
+/* Responsive padding for pages */
+.page-content {
+  padding: 0 60px;
+}
+
+@media (max-width: 1024px) {
+  .page-content {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding: 0 15px;
+  }
+}
+
+/* Utility classes (you can use these anywhere) */
+.text-center {
+  text-align: center;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
